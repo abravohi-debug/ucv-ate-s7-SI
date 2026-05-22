@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "new-kedro-project"
+version = "0.1.0"
+description = "Pipeline de procesamiento de imágenes con Kedro"
+authors = ["angel"]
+readme = "README.md"
+packages = [{ include = "new_kedro_project", from = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+kedro = "^1.4.0"
+kedro-datasets = "^9.3.0"
+pillow = "^12.2.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.0.3"
+ruff = "^0.15.14"
+pytest-cov = "^7.1.0"
+
+[tool.kedro]
+package_name = "new_kedro_project"
+project_name = "New Kedro Project"
+kedro_init_version = "1.4.0"
+tools = []
+example_pipeline = false
+source_dir = "src"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+[tool.kedro_telemetry]
+project_id = "378a7496631e42dab04fdbcb99291467"
